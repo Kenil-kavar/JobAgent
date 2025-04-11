@@ -15,7 +15,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from dotenv import load_dotenv
 load_dotenv()
 # ------------------ Configuration ------------------
-LINKEDIN_URL = "https://www.linkedin.com/jobs/search/?keywords=ML%20intern&f_TPR=r604800&geoId=101588871&origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&refresh=true"
+LINKEDIN_URL = "https://www.linkedin.com/jobs/search/?currentJobId=4207202971&f_TPR=r3000&geoId=101588871&keywords=machine%20learning%20intern&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true"
 SENT_JOBS_FILE = "sent_jobs.txt"
 FIRST_RUN_FLAG = "first_run.txt"
 
@@ -125,4 +125,4 @@ if st.button("🚀 Start Scraping"):
   while True:
     with st.spinner("Scraping jobs and sending emails..."):
         graph.invoke({"new_jobs": []})
-        time.sleep(5)
+        time.sleep(2000)
