@@ -93,9 +93,9 @@ def scrape_linkedin_jobs(_: JobState) -> JobState:
 # ------------------ Send Email ------------------
 def send_email_notification(state: JobState) -> JobState:
     new_jobs = state["new_jobs"]
-    if not new_jobs:
-        st.info("No new jobs found.")
-        return state
+    #if not new_jobs:
+    #    st.info("No new jobs found.")
+    #    return state
 
     yag = yagmail.SMTP(SENDER_EMAIL, APP_PASSWORD)
     body = "\n\n".join([f"{job['title']}\n{job['link']}" for job in new_jobs])
