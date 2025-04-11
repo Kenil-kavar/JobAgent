@@ -122,7 +122,7 @@ graph = builder.compile()
 st.title("🔍 LinkedIn ML Intern Job Scraper")
 
 if st.button("🚀 Start Scraping"):
-  while True
+  while True:
     with st.spinner("Scraping jobs and sending emails..."):
         graph.invoke({"new_jobs": []})
         time.sleep(5)
