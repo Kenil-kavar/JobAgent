@@ -1,0 +1,6 @@
+streamlit
+beautifulsoup4
+yagmail
+langgraph
+selenium
+webdriver-manager
